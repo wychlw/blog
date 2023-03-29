@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+last_commit
+
+source/_drafts
+source/_posts/ta的一场真实的梦.md
