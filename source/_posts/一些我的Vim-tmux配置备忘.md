@@ -88,6 +88,19 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 配置就是官方的，包含自动关闭最后一个窗口。并没有做很多的美化。
 
+##### 常见问题
+
+如果在关闭 tab 时出现：
+> Error detected while processing BufEnter Autocommands for "*":
+> Press ENTER or type command to continue
+
+这是因为官方的 README.md 是过时的。将 “Close the tab if NERDTree is the only window remaining in it.“ 的命令更换为如下的：
+
+```
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | call feedkeys(":quit\<CR>:\<BS>") | endif
+```
+
 #### LeaderF
 
 ```
