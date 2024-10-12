@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>妄尘驿</title>
+  <icon>https://blog.wcysite.com/icon.png</icon>
+  <subtitle>喵呜~</subtitle>
+  <link href="https://blog.wcysite.com/atom.xml" rel="self"/>
+  
+  <link href="https://blog.wcysite.com/"/>
+  <updated>2024-10-12T08:50:30.566Z</updated>
+  <id>https://blog.wcysite.com/</id>
+  
+  <author>
+    <name>泠妄</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些我的 Vim&amp;tmux 配置备忘</title>
+    <link href="https://blog.wcysite.com/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/"/>
+    <id>https://blog.wcysite.com/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/</id>
+    <published>2024-04-01T03:16:44.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;em&gt;注：由于配置又杂，又有很多的来源早找不到了。如果你发现有来自于你的配置但是没有提到，在下面回复一下让我加上就好，阿里嘎多！&lt;/em&gt;&lt;/p&gt;
+&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;有笨蛋在每次准备继续配置 Vim 和 tmux 时，打开自己几个月之前刚该国的配置都会一脸懵……于是在此做个备忘。这并不是一个教程，嗯。&lt;/p&gt;
+&lt;p&gt;以及首先需要承认我是个 VSC 人，所以以下的 Vim</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="vim, tmux, config" scheme="https://blog.wcysite.com/tags/vim-tmux-config/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>来使用Worker做免费的Email服务器!</title>
+    <link href="https://blog.wcysite.com/2024/%E6%9D%A5%E4%BD%BF%E7%94%A8Worker%E5%81%9A%E5%85%8D%E8%B4%B9%E7%9A%84Email%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://blog.wcysite.com/2024/%E6%9D%A5%E4%BD%BF%E7%94%A8Worker%E5%81%9A%E5%85%8D%E8%B4%B9%E7%9A%84Email%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2024-03-01T12:16:56.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>来谈谈64位乘法器和除法吧！</title>
+    <link href="https://blog.wcysite.com/2023/%E6%9D%A5%E8%B0%88%E8%B0%8864%E4%BD%8D%E4%B9%98%E6%B3%95%E5%99%A8%E5%92%8C%E9%99%A4%E6%B3%95%E5%99%A8%E5%90%A7%EF%BC%81/"/>
+    <id>https://blog.wcysite.com/2023/%E6%9D%A5%E8%B0%88%E8%B0%8864%E4%BD%8D%E4%B9%98%E6%B3%95%E5%99%A8%E5%92%8C%E9%99%A4%E6%B3%95%E5%99%A8%E5%90%A7%EF%BC%81/</id>
+    <published>2023-03-16T00:13:12.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;在开始之前，我们必须要先谈谈我们的目标：&lt;br&gt;
+我们在这里并不是想完成一个大作业或者写出一个很好的乘法器，而是在你上完一天课后，&lt;strong&gt;在睡前的两小时&lt;/strong&gt;内能完成的的一个作品。&lt;/p&gt;
+&lt;p&gt;所以，我并不会做出一个很好的乘法器，我们将会使用一些更简单的方式。&lt;br&gt;
+当然我知道，你肯定不会满足于此对吧？所以我们仍会谈一谈更快速乘法器的原理，并给</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+    <category term="hardware" scheme="https://blog.wcysite.com/tags/hardware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建一个64位加法器！</title>
+    <link href="https://blog.wcysite.com/2023/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA64%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8%EF%BC%81/"/>
+    <id>https://blog.wcysite.com/2023/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA64%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8%EF%BC%81/</id>
+    <published>2023-03-13T16:11:45.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;由于这个学期选了一节硬件设计的课程，所以开始写一些硬件的小东西w&lt;/p&gt;
+&lt;p&gt;所以不妨从一个最核心也比较简单的部件：加法器开始？&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;我默认你对二进制已经很熟悉惹。不熟悉的话，可以去看一些进制相关的内容？&lt;/em&gt;&lt;/p&gt;
+&lt;h1&gt;全加器&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;如果你对这些内容已经很熟悉的话，跳转到相应的区域吧！&lt;/em&gt;&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+    <category term="hardware" scheme="https://blog.wcysite.com/tags/hardware/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于Whitebox GAN的一些碎碎念</title>
+    <link href="https://blog.wcysite.com/2023/%E5%85%B3%E4%BA%8EWhitebox%20GAN%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    <id>https://blog.wcysite.com/2023/%E5%85%B3%E4%BA%8EWhitebox%20GAN%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</id>
+    <published>2023-03-12T10:47:00.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;什么是Whitebox GAN？&lt;/h1&gt;
+&lt;p&gt;Whitebox GAN网络最初发表于CVPR2020的论文&lt;a href=&quot;https://systemerrorwang.github.io/White-box-Cartoonization/&quot;&gt;Learning to Cartoonize Using White-box Cartoon</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>堆</title>
+    <link href="https://blog.wcysite.com/2022/%E5%A0%86/"/>
+    <id>https://blog.wcysite.com/2022/%E5%A0%86/</id>
+    <published>2022-10-23T16:05:05.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;简介&lt;/h1&gt;
+&lt;p&gt;有一棵树，其树上的每个节点有一个值，且每个节点的这个值都大于等于（小于等于）其父亲上的值。&lt;br&gt;
+那么，我们就把这颗特别的树叫做一个“堆”。&lt;br&gt;
+如果，节点值是大于等于其父亲的值，那么我们就叫做小根堆；反之节点值小于等于其父亲的值，那么我们就叫做大根堆。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于符号链接的一些碎碎念</title>
+    <link href="https://blog.wcysite.com/2022/%E5%85%B3%E4%BA%8E%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    <id>https://blog.wcysite.com/2022/%E5%85%B3%E4%BA%8E%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/</id>
+    <published>2022-05-15T10:47:00.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;静态链接&lt;/h1&gt;
+&lt;p&gt;在C中，编译一个程序的过程如下：&lt;br&gt;
+&lt;code&gt;xx.c-&amp;gt;(翻译器)-&amp;gt;xx.o-&amp;gt;(链接器)-&amp;gt;xx&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;而在第二部将xx.o构造为一个可执行文件的过程被称为静态链接&lt;/p&gt;
+&lt;p&gt;为了完成静态链接这个目标，链接器需要做两件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;知道每一个变量到底是什么，这样才能将变量的定义与引用</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在C中面向对象:#0x2 让我们来实现一个迭代器！</title>
+    <link href="https://blog.wcysite.com/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x2-%E8%AE%A9%E6%88%91%E4%BB%AC%E6%9D%A5%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%81/"/>
+    <id>https://blog.wcysite.com/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x2-%E8%AE%A9%E6%88%91%E4%BB%AC%E6%9D%A5%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%81/</id>
+    <published>2022-05-14T15:13:37.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;em&gt;非常建议先看0x1&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;s&gt;&lt;em&gt;说起来我才发现，因为我超喜欢用波浪线，一大堆东西被替换成了删除线QAQ&lt;/em&gt;&lt;/s&gt;&lt;/p&gt;
+&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;我们先来解决上一节中遗留下来的几个问题吧&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在C中面向对象:#0x1 来&quot;注册&quot;一个对象吧~</title>
+    <link href="https://blog.wcysite.com/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x1-%E6%9D%A5-%E6%B3%A8%E5%86%8C-%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%90%A7/"/>
+    <id>https://blog.wcysite.com/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x1-%E6%9D%A5-%E6%B3%A8%E5%86%8C-%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%90%A7/</id>
+    <published>2022-05-12T10:53:18.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;em&gt;非常建议先看#0x0</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在C中面向对象:#0x0 封装、继承与多态</title>
+    <link href="https://blog.wcysite.com/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x0-%E5%B0%81%E8%A3%85%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/"/>
+    <id>https://blog.wcysite.com/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x0-%E5%B0%81%E8%A3%85%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/</id>
+    <published>2022-05-09T07:24:09.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;前言：为什么要在C中面向对象&lt;/h1&gt;
+&lt;p&gt;虽然c++由c语言发展而来，且其中（大部分）兼容了c的语法。它解决了c中开发繁杂（没有对象、抽象方法），不好阅读（为了实现多态，指针、强制类型转换满天飞），不易维护等痛点。&lt;/p&gt;
+&lt;p&gt;但不得不说，现在的c++更像一锅大杂烩，学习难度指数级上升。而c与其相比就变得很容易入门了（基础总共就那么点）。而且，很多的嵌入式项目并没有提供c++的工具链</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一种利用机场搭建wireguard VPN的方法</title>
+    <link href="https://blog.wcysite.com/2022/%E4%B8%80%E7%A7%8D%E5%88%A9%E7%94%A8v2ray%E6%90%AD%E5%BB%BAwireguard-VPN%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://blog.wcysite.com/2022/%E4%B8%80%E7%A7%8D%E5%88%A9%E7%94%A8v2ray%E6%90%AD%E5%BB%BAwireguard-VPN%E7%9A%84%E6%96%B9%E6%B3%95/</id>
+    <published>2022-03-07T07:39:10.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;原因&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;机场可以更大程度上的保证连接的稳定性（不会被乱掐）&lt;/li&gt;
+&lt;li&gt;v2ray中支持的socks、websocket、http等代理方式均是5层的代理，而wireguard是一个三层的代理。在搭建一些必须要在一个子网内的服务时，三层代理便是一个必不可少的选项了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;声明&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;我使用这种方式的原因只是</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>n8n—一款开源信息流工具的自搭建与使用</title>
+    <link href="https://blog.wcysite.com/2021/n8n%E2%80%94%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E4%BF%A1%E6%81%AF%E6%B5%81%E5%B7%A5%E5%85%B7%E7%9A%84%E8%87%AA%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
+    <id>https://blog.wcysite.com/2021/n8n%E2%80%94%E4%B8%80%E6%AC%BE%E5%BC%80%E6%BA%90%E4%BF%A1%E6%81%AF%E6%B5%81%E5%B7%A5%E5%85%B7%E7%9A%84%E8%87%AA%E6%90%AD%E5%BB%BA%E4%B8%8E%E4%BD%BF%E7%94%A8/</id>
+    <published>2021-12-29T23:40:23.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;什么是n8n&lt;/h1&gt;
+&lt;p&gt;n8n是一款开源的自动工作流处理工具。&lt;br&gt;
+举个例子，现在老师要你按照excel里的邮箱给每个人发送些许不同的邮件（可能名字有区别啊）&lt;br&gt;
+或者要求你每次把一个平台上的内容转发到另一个平台上啊&lt;br&gt;
+或者同步几个文件的数据啊……&lt;br&gt;
+&lt;strong&gt;甚至！在进门之后关灯这种事&lt;/strong&gt;&lt;br&gt;
+有些时候，这种看起来写个脚本就能重复做的事情</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tags" scheme="https://blog.wcysite.com/tags/tags/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>踩坑DN42-p2-peer!</title>
+    <link href="https://blog.wcysite.com/2021/%E8%B8%A9%E5%9D%91DN42-p2-peer/"/>
+    <id>https://blog.wcysite.com/2021/%E8%B8%A9%E5%9D%91DN42-p2-peer/</id>
+    <published>2021-12-12T17:45:56.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这篇文章可能会存在不精确、错误、过时等问题。遇到时请务必留言给喵喵修改！！&lt;/p&gt;
+&lt;p&gt;在上一集中，俺们在DN42上注册了一个ASN，并申请到了IP地址池。那接下来，就该开始和别人建立连接了。&lt;br&gt;
+而这，就叫做：&lt;/p&gt;
+&lt;h1&gt;PEER!&lt;/h1&gt;
+&lt;h2 id=&quot;before&quot;&gt;before&lt;/h2&gt;
+&lt;p&gt;你可能需要：&lt;br&gt;
+更新一下系统和软件&lt;br&gt;
+&lt;code&gt;apt</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建一个KMS服务器</title>
+    <link href="https://blog.wcysite.com/2021/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAKMS%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://blog.wcysite.com/2021/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAKMS%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <published>2021-10-13T07:34:38.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;0x55aa 为什么&lt;/h1&gt;
+&lt;p&gt;因为好玩！（x&lt;br&gt;
+当然，市面上已经有着各种的kms激活器。可，每一个激活器都会多多少少的报毒&lt;br&gt;
+虽然我们对于那些激活器的作者十分信任，但是……谁知道有木有谁在里面真的藏了点什么呢？&lt;br&gt;
+嘛……所以，最放心的方式当然是自己来啦~&lt;/p&gt;
+&lt;h1&gt;0x00 什么是KMS？&lt;/h1&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>踩坑DN42 p1 注册</title>
+    <link href="https://blog.wcysite.com/2021/%E8%B8%A9%E5%9D%91DN42-p1-%E6%B3%A8%E5%86%8C/"/>
+    <id>https://blog.wcysite.com/2021/%E8%B8%A9%E5%9D%91DN42-p1-%E6%B3%A8%E5%86%8C/</id>
+    <published>2021-03-05T04:55:32.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这篇文章可能会存在不精确、错误、过时等问题。遇到时请务必留言给喵喵修改！！&lt;/p&gt;
+&lt;h1&gt;DN42简介&lt;/h1&gt;
+&lt;p&gt;DN42（Decentralized Network</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记万事达借记卡的申请</title>
+    <link href="https://blog.wcysite.com/2020/%E8%AE%B0%E4%B8%87%E4%BA%8B%E8%BE%BE%E5%80%9F%E8%AE%B0%E5%8D%A1%E7%9A%84%E7%94%B3%E8%AF%B7/"/>
+    <id>https://blog.wcysite.com/2020/%E8%AE%B0%E4%B8%87%E4%BA%8B%E8%BE%BE%E5%80%9F%E8%AE%B0%E5%8D%A1%E7%9A%84%E7%94%B3%E8%AF%B7/</id>
+    <published>2020-11-16T04:53:37.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;原因&lt;/h1&gt;
+&lt;p&gt;由于没满18＆＆没有收入证明，导致申请不了信用卡。而国外的购物（eg：steam、许多超便宜的VPS、Amazon…）都不支持银联卡。&lt;br&gt;
+在这种情况下，由于万事达借记卡只需要16岁就可以申请，且目前看来没有硬性要求，便成为了我唯一的选择。&lt;/p&gt;
+&lt;h1&gt;申请&lt;/h1&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>憨憨手滑删库了...</title>
+    <link href="https://blog.wcysite.com/2020/%E6%86%A8%E6%86%A8%E6%89%8B%E6%BB%91%E5%88%A0%E5%BA%93%E4%BA%86/"/>
+    <id>https://blog.wcysite.com/2020/%E6%86%A8%E6%86%A8%E6%89%8B%E6%BB%91%E5%88%A0%E5%BA%93%E4%BA%86/</id>
+    <published>2020-11-10T04:51:52.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;rt…&lt;/p&gt;
+&lt;p&gt;所以…之前所有的评论和链接都木了…尽力抢救了几篇文章…&lt;br&gt;
+我是个憨憨…（叹气&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="others" scheme="https://blog.wcysite.com/categories/others/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>别了，OI</title>
+    <link href="https://blog.wcysite.com/2020/%E5%88%AB%E4%BA%86%EF%BC%8COI/"/>
+    <id>https://blog.wcysite.com/2020/%E5%88%AB%E4%BA%86%EF%BC%8COI/</id>
+    <published>2020-05-03T15:55:46.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;正如标题所写的那样，我退役了。&lt;br&gt;
+这大概已经是这篇文章发出去前约半个月的事了。显然，我鸽了。&lt;br&gt;
+要说这事影响大吧……该学的东西还是要学，该肝的视频还是要肝。毕竟，人还没死啊。&lt;br&gt;
+但这毕竟是我不想遗忘的，所以，一起来听个故事吧&lt;br&gt;
+当然，我不是巨佬，也没有文采。所以……&lt;/p&gt;
+&lt;h1&gt;很久很久以前……&lt;/h1&gt;
+&lt;p&gt;（故事标准开头）&lt;br&gt;
+那要从初二的时候说起（现在</summary>
+        
+      
+    
+    
+    
+    <category term="diary" scheme="https://blog.wcysite.com/categories/diary/"/>
+    
+    
+    <category term="life" scheme="https://blog.wcysite.com/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从排序开始</title>
+    <link href="https://blog.wcysite.com/2020/%E4%BB%8E%E6%8E%92%E5%BA%8F%E5%BC%80%E5%A7%8B/"/>
+    <id>https://blog.wcysite.com/2020/%E4%BB%8E%E6%8E%92%E5%BA%8F%E5%BC%80%E5%A7%8B/</id>
+    <published>2020-04-07T07:55:00.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;   &lt;strong&gt;图还没做完，什么时候这行字删了，图就配好了&lt;/strong&gt;   &lt;strong&gt;以及大概还要修改一下的。。。&lt;/strong&gt; &lt;/blockquote&gt;  每种排序的代码会附在文末（现在还没有配哒） </summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构——给数据排排坐</title>
+    <link href="https://blog.wcysite.com/2020/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%BB%99%E6%95%B0%E6%8D%AE%E6%8E%92%E6%8E%92%E5%9D%90/"/>
+    <id>https://blog.wcysite.com/2020/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E7%BB%99%E6%95%B0%E6%8D%AE%E6%8E%92%E6%8E%92%E5%9D%90/</id>
+    <published>2020-04-06T23:55:00.000Z</published>
+    <updated>2024-10-12T08:50:30.566Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;beginning&quot;&gt;beginning&lt;/h3&gt;
+&lt;p&gt;栈、队列、数组、链表、树、图…这些东西感觉有些没听过。但实际上，我们每天都在使用它们。&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="https://blog.wcysite.com/categories/note/"/>
+    
+    
+    <category term="tech" scheme="https://blog.wcysite.com/tags/tech/"/>
+    
+  </entry>
+  
+</feed>

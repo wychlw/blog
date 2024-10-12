@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>一些我的 Vim&amp;tmux 配置备忘 | 妄尘驿</title><meta name="author" content="泠妄"><meta name="copyright" content="泠妄"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="注：由于配置又杂，又有很多的来源早找不到了。如果你发现有来自于你的配置但是没有提到，在下面回复一下让我加上就好，阿里嘎多！ 前言 有笨蛋在每次准备继续配置 Vim 和 tmux 时，打开自己几个月之前刚该国的配置都会一脸懵……于是在此做个备忘。这并不是一个教程，嗯。 以及首先需要承认我是个 VSC 人，所以以下的 Vim 配置更多的是在 VSC 没法用时做一个替代，并没有完全的美化和配置舒服。但是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一些我的 Vim&amp;tmux 配置备忘">
+<meta property="og:url" content="https://blog.wcysite.com/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/index.html">
+<meta property="og:site_name" content="妄尘驿">
+<meta property="og:description" content="注：由于配置又杂，又有很多的来源早找不到了。如果你发现有来自于你的配置但是没有提到，在下面回复一下让我加上就好，阿里嘎多！ 前言 有笨蛋在每次准备继续配置 Vim 和 tmux 时，打开自己几个月之前刚该国的配置都会一脸懵……于是在此做个备忘。这并不是一个教程，嗯。 以及首先需要承认我是个 VSC 人，所以以下的 Vim 配置更多的是在 VSC 没法用时做一个替代，并没有完全的美化和配置舒服。但是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.xjh.me/random_img.php?return=302&tmp=2">
+<meta property="article:published_time" content="2024-04-01T03:16:44.000Z">
+<meta property="article:modified_time" content="2024-10-12T08:50:30.566Z">
+<meta property="article:author" content="泠妄">
+<meta property="article:tag" content="vim, tmux, config">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.xjh.me/random_img.php?return=302&tmp=2"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.wcysite.com/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"作者: 泠妄","link":"链接: ","source":"来源: 妄尘驿","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一些我的 Vim&tmux 配置备忘',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-12 16:50:30'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/main.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="妄尘驿" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="妄尘驿" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://js-d.wcysite.com/gh/wychlw/homepage@main/assets/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.wcysite.com/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 博客首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们喵</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我？</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其它</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/privacy-policy/"><span> privacy-policy</span></a></li><li><a class="site-page child" href="/links-apply/"><span> 友联申请</span></a></li><li><a class="site-page child" href="/atom.xml"><span> rss(atom)</span></a></li><li><a class="site-page child" href="/rss2.xml"><span> rss(rss2)</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://img.xjh.me/random_img.php?return=302&amp;tmp=2')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">妄尘驿</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.wcysite.com/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 博客首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们喵</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我？</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其它</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/privacy-policy/"><span> privacy-policy</span></a></li><li><a class="site-page child" href="/links-apply/"><span> 友联申请</span></a></li><li><a class="site-page child" href="/atom.xml"><span> rss(atom)</span></a></li><li><a class="site-page child" href="/rss2.xml"><span> rss(rss2)</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">一些我的 Vim&amp;tmux 配置备忘</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-01T03:16:44.000Z" title="发表于 2024-04-01 11:16:44">2024-04-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-12T08:50:30.566Z" title="更新于 2024-10-12 16:50:30">2024-10-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/note/">note</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="一些我的 Vim&amp;tmux 配置备忘"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><em>注：由于配置又杂，又有很多的来源早找不到了。如果你发现有来自于你的配置但是没有提到，在下面回复一下让我加上就好，阿里嘎多！</em></p>
+<h1>前言</h1>
+<p>有笨蛋在每次准备继续配置 Vim 和 tmux 时，打开自己几个月之前刚该国的配置都会一脸懵……于是在此做个备忘。这并不是一个教程，嗯。</p>
+<p>以及首先需要承认我是个 VSC 人，所以以下的 Vim 配置更多的是在 VSC 没法用时做一个替代，并没有完全的美化和配置舒服。但是目前够用了，大概？qw</p>
+<p>一个好处是，要是遇上点什么没法装 VSC 的服务器或者小板子，只要有个 ssh 连接，就一个 sftp 丢上去这一套就行 qwq</p>
+<h2 id="Vim">Vim</h2>
+<p>先来个展示：<img src="https://cdn.jsdelivr.net/gh/wychlw/img@main///img/202404011138220.png" alt=""></p>
+<p>（如果你发现配置文件里有什么有的但我又没提到的，那说明……我也忘了（扶额）</p>
+<h3 id="基础设置">基础设置</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">set nocompatible</span><br><span class="line">filetype on</span><br><span class="line">filetype indent on</span><br><span class="line">filetype plugin on</span><br><span class="line">syntax on</span><br><span class="line"></span><br><span class="line">set encoding=utf-8</span><br><span class="line">set spell</span><br><span class="line">set number</span><br><span class="line">set cursorline</span><br><span class="line">set tabstop=4</span><br><span class="line"></span><br><span class="line">set incsearch</span><br><span class="line">set ignorecase</span><br><span class="line">set smartcase</span><br><span class="line">set hlsearch</span><br><span class="line"></span><br><span class="line">set ruler</span><br><span class="line"></span><br><span class="line">&quot;以上emmm 就是这样&quot;</span><br><span class="line"></span><br><span class="line">let mapleader=&quot;\&lt;space&gt;&quot;</span><br><span class="line">nnoremap &lt;leader&gt;sv :source $MYVIMRC&lt;CR&gt;</span><br></pre></td></tr></table></figure>
+<p>对于全局的 leader，我使用了 <code>&quot;\&lt;space&gt;&quot;</code> （若不正常试试 <code>&quot; &quot;</code> 或 <code>&quot;&lt;space&gt;&quot;</code>）。最显然的原因是，它很好按，<strong>并且没有被什么奇奇怪怪的东西占用掉</strong>。<br>
+由于改配置时肯定要不断测试效果，快捷键 <code>&lt;leader&gt;sv</code> 可以快速的重新加载配置。按一下空格再同时按下 <code>sv</code> 就行，很方便 ww</p>
+<h3 id="插件">插件</h3>
+<p>目前启用了以下插件：</p>
+<ul>
+<li>lightline 状态栏</li>
+<li>nerdtree 文件树</li>
+<li>coc.nvim 代码补全&amp;提示</li>
+<li>LeaderF 文件查找</li>
+<li>catppuccin/nvim 主题</li>
+</ul>
+<h4 id="lightline">lightline</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let g:lightline = &#123;</span><br><span class="line">                                                \&#x27;colorscheme&#x27;: &#x27;PaperColor&#x27;</span><br><span class="line">                                \&#125;</span><br></pre></td></tr></table></figure>
+<p>采用了 <code>PaperColor</code> 主题，主要是只有这个配色看得很清</p>
+<h4 id="nerdtree">nerdtree</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">autocmd StdinReadPre * let s:std_in=1</span><br><span class="line">autocmd VimEnter * NERDTree | if argc() &gt; 0 || exists(&quot;s:std_in&quot;) | wincmd p | endif</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * if tabpagenr(&#x27;$&#x27;) == 1 &amp;&amp; winnr(&#x27;$&#x27;) == 1 &amp;&amp; exists(&#x27;b:NERDTree&#x27;) &amp;&amp; b:NERDTree.isTabTree() | quit | endif</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * if bufname(&#x27;#&#x27;) =~ &#x27;NERD_tree_\d\+&#x27; &amp;&amp; bufname(&#x27;%&#x27;) !~ &#x27;NERD_tree_\d\+&#x27; &amp;&amp; winnr(&#x27;$&#x27;) &gt; 1 |</span><br><span class="line">    \ let buf=bufnr() | buffer# | execute &quot;normal! \&lt;C-W&gt;w&quot; | execute &#x27;buffer&#x27;.buf | endif</span><br><span class="line"></span><br><span class="line">let g:NERDTreeDirArrowExpandable = &#x27;▸&#x27;</span><br><span class="line">let g:NERDTreeDirArrowCollapsible = &#x27;▾&#x27;</span><br></pre></td></tr></table></figure>
+<p>配置就是官方的，包含自动关闭最后一个窗口。并没有做很多的美化。</p>
+<h5 id="常见问题">常见问题</h5>
+<p>如果在关闭 tab 时出现：</p>
+<blockquote>
+<p>Error detected while processing BufEnter Autocommands for “*”:<br>
+Press ENTER or type command to continue</p>
+</blockquote>
+<p>这是因为官方的 <a target="_blank" rel="noopener" href="http://README.md">README.md</a> 是过时的。将 “Close the tab if NERDTree is the only window remaining in it.“ 的命令更换为如下的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot; Close the tab if NERDTree is the only window remaining in it.</span><br><span class="line">autocmd BufEnter * if winnr(&#x27;$&#x27;) == 1 &amp;&amp; exists(&#x27;b:NERDTree&#x27;) &amp;&amp; b:NERDTree.isTabTree() | call feedkeys(&quot;:quit\&lt;CR&gt;:\&lt;BS&gt;&quot;) | endif</span><br></pre></td></tr></table></figure>
+<h4 id="LeaderF">LeaderF</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&quot; don&#x27;t show the help in normal mode</span><br><span class="line">let g:Lf_HideHelp = 1</span><br><span class="line">let g:Lf_UseCache = 0</span><br><span class="line">let g:Lf_UseVersionControlTool = 0</span><br><span class="line">let g:Lf_IgnoreCurrentBufferName = 1</span><br><span class="line">&quot; popup mode</span><br><span class="line">let g:Lf_WindowPosition = &#x27;popup&#x27;</span><br><span class="line">let g:Lf_StlSeparator = &#123; &#x27;left&#x27;: &quot;\ue0b0&quot;, &#x27;right&#x27;: &quot;\ue0b2&quot;, &#x27;font&#x27;: &quot;DejaVu Sans Mono for Powerline&quot; &#125;</span><br><span class="line">let g:Lf_PreviewResult = &#123;&#x27;Function&#x27;: 0, &#x27;BufTag&#x27;: 0 &#125;</span><br><span class="line"></span><br><span class="line">let g:Lf_ShortcutF = &quot;&lt;C-f&gt;&quot;</span><br><span class="line">let g:Lf_DefaultExternalTool=&#x27;rg&#x27;</span><br><span class="line"></span><br><span class="line">let g:Lf_WorkingDirectoryMode = &#x27;AF&#x27;</span><br><span class="line">let g:Lf_RootMarkers = [&#x27;.git&#x27;, &#x27;.svn&#x27;, &#x27;.hg&#x27;, &#x27;.project&#x27;, &#x27;.root&#x27;]</span><br><span class="line"></span><br><span class="line">nmap &lt;leader&gt;fr &lt;Plug&gt;LeaderfRgPrompt</span><br><span class="line">nmap &lt;leader&gt;fra &lt;Plug&gt;LeaderfRgCwordLiteralNoBoundary</span><br><span class="line">nmap &lt;leader&gt;frb &lt;Plug&gt;LeaderfRgCwordLiteralBoundary</span><br><span class="line">nmap &lt;leader&gt;frc &lt;Plug&gt;LeaderfRgCwordRegexNoBoundary</span><br><span class="line">nmap &lt;leader&gt;frd &lt;Plug&gt;LeaderfRgCwordRegexBoundary</span><br><span class="line">vmap &lt;leader&gt;fra &lt;Plug&gt;LeaderfRgVisualLiteralNoBoundary</span><br><span class="line">vmap &lt;leader&gt;frb &lt;Plug&gt;LeaderfRgVisualLiteralBoundary</span><br><span class="line">vmap &lt;leader&gt;frc &lt;Plug&gt;LeaderfRgVisualRegexNoBoundary</span><br><span class="line">vmap &lt;leader&gt;frd &lt;Plug&gt;LeaderfRgVisualRegexBoundary</span><br></pre></td></tr></table></figure>
+<p>发现自己其实很少使用默认的那堆，所有并没有加上。在我的环境里 <code>C-f</code> 并没有被占用，所以干脆就用它来做大窗口的触发了！</p>
+<p>然后就是 <code>&lt;leader&gt;frx</code> 的直接 <code>rg</code> 搜索……基本上我就会用到这些因为。</p>
+<h4 id="coc-nvim">coc.nvim</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">set signcolumn=yes</span><br><span class="line">inoremap &lt;silent&gt;&lt;expr&gt; &lt;Tab&gt;</span><br><span class="line">      \ coc#pum#visible() ? coc#pum#next(1) :</span><br><span class="line">      \ CheckBackspace() ? &quot;\&lt;Tab&gt;&quot; :</span><br><span class="line">      \ coc#refresh()</span><br><span class="line">inoremap &lt;expr&gt;&lt;S-TAB&gt; coc#pum#visible() ? coc#pum#prev(1) : &quot;\&lt;C-h&gt;&quot;</span><br><span class="line"></span><br><span class="line">&quot; Make &lt;CR&gt; to accept selected completion item or notify coc.nvim to format</span><br><span class="line">&quot; &lt;C-g&gt;u breaks current undo, please make your own choice</span><br><span class="line">inoremap &lt;silent&gt;&lt;expr&gt; &lt;CR&gt; coc#pum#visible() ? coc#pum#confirm()</span><br><span class="line">                              \: &quot;\&lt;C-g&gt;u\&lt;CR&gt;\&lt;c-r&gt;=coc#on_enter()\&lt;CR&gt;&quot;</span><br><span class="line"></span><br><span class="line">function! CheckBackspace() abort</span><br><span class="line">  let col = col(&#x27;.&#x27;) - 1</span><br><span class="line">  return !col || getline(&#x27;.&#x27;)[col - 1]  =~# &#x27;\s&#x27;</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line">autocmd CursorHold * silent call CocActionAsync(&#x27;highlight&#x27;)</span><br><span class="line">xmap &lt;C-I&gt; &lt;Plug&gt;(coc-format)</span><br><span class="line">xmap &lt;C&gt;&lt;S&gt;I &lt;Plug&gt;(coc-format)</span><br><span class="line">nmap &lt;C-I&gt; &lt;Plug&gt;(coc-format)</span><br><span class="line">nmap &lt;C&gt;&lt;S&gt;I &lt;Plug&gt;(coc-format)</span><br><span class="line"></span><br><span class="line">let g:coc_global_extensions = [ </span><br><span class="line">                                                \ &#x27;coc-json&#x27;, </span><br><span class="line">                                                \ &#x27;coc-clangd&#x27;,</span><br><span class="line">                                                \ &#x27;coc-git&#x27;</span><br><span class="line">                                                \]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nmap &lt;leader&gt;c :CocCommand&lt;space&gt;</span><br></pre></td></tr></table></figure>
+<p>用 <code>coc.nvim</code> 来做代码补全。同样截取官方配置。</p>
+<p>对于格式化整个文档，部分沿用了 VSC 的默认键位：<code>C-i</code>。</p>
+<h4 id="catppuccin-nvim">catppuccin/nvim</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">colorscheme catppuccin-mocha</span><br></pre></td></tr></table></figure>
+<p>一行启用 <code>mocha</code> 主题。看得清就完事了。</p>
+<h3 id="快捷键">快捷键</h3>
+<p>很多系统上， <code>C-s</code> <code>C-q</code> 等很可能是被占用了的……但是我的没有所有能这么用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">nnoremap &lt;A-left&gt; &lt;C-w&gt;h</span><br><span class="line">nnoremap &lt;A-right&gt; &lt;C-w&gt;l</span><br><span class="line">nnoremap &lt;A-up&gt; &lt;C-w&gt;k</span><br><span class="line">nnoremap &lt;A-down&gt; &lt;C-w&gt;j</span><br><span class="line"></span><br><span class="line">nnoremap &lt;S-up&gt; &lt;C-w&gt;s</span><br><span class="line">nnoremap &lt;S-down&gt; &lt;C-w&gt;s&lt;C-w&gt;j</span><br><span class="line">nnoremap &lt;S-left&gt; &lt;C-w&gt;v</span><br><span class="line">nnoremap &lt;S-right&gt; &lt;C-w&gt;v&lt;C-w&gt;l</span><br><span class="line">nnoremap &lt;S-h&gt; :sp&lt;space&gt;</span><br><span class="line">nnoremap &lt;S-v&gt; :svp&lt;space&gt;</span><br><span class="line"></span><br><span class="line">nnoremap &lt;leader&gt;oh :sp&lt;space&gt;</span><br><span class="line">nnoremap &lt;leader&gt;ov :svp&lt;space&gt;</span><br><span class="line"></span><br><span class="line">nnoremap &lt;C-q&gt; &lt;C-w&gt;q</span><br><span class="line">nnoremap &lt;C-s&gt; :w&lt;CR&gt;</span><br><span class="line">inoremap &lt;C-s&gt; &lt;ESC&gt;:w&lt;CR&gt;i</span><br><span class="line">inoremap &lt;C-q&gt; &lt;ESC&gt;:w&lt;CR&gt;&lt;C-w&gt;q</span><br></pre></td></tr></table></figure>
+<p>其中，把切窗口变成了 <code>Alt+方向键</code>；<br>
+分割窗口变成了 <code>Shift+方向键</code> （自动切到新窗口），<code>S+h/v</code> 也可以按行/列分割（虽然并用不到？）；<br>
+<code>&lt;leader&gt;ox</code> 可以按行/列打开新文件。</p>
+<p>在命令下使用 <code>C-s</code> 保存， <code>C-q</code> 退出（不带自动保存）<br>
+在插入下 <code>C-s</code> 保存并继续编辑，<code>C-q</code> 退出<strong>带自动保存</strong></p>
+<h3 id="总配置">总配置</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br></pre></td><td class="code"><pre><span class="line">set nocompatible</span><br><span class="line">filetype on</span><br><span class="line">filetype indent on</span><br><span class="line">filetype plugin on</span><br><span class="line">syntax on</span><br><span class="line"></span><br><span class="line">set encoding=utf-8</span><br><span class="line">set spell</span><br><span class="line">set number</span><br><span class="line">set cursorline</span><br><span class="line">set tabstop=4</span><br><span class="line"></span><br><span class="line">set incsearch</span><br><span class="line">set ignorecase</span><br><span class="line">set smartcase</span><br><span class="line">set hlsearch</span><br><span class="line"></span><br><span class="line">set ruler</span><br><span class="line"></span><br><span class="line">call plug#begin(&#x27;~/.vim/plugged&#x27;)</span><br><span class="line"></span><br><span class="line">Plug &#x27;itchyny/lightline.vim&#x27;</span><br><span class="line">Plug &#x27;scrooloose/syntastic&#x27;</span><br><span class="line">Plug &#x27;scrooloose/nerdtree&#x27;</span><br><span class="line">Plug &#x27;neoclide/coc.nvim&#x27;, &#123;&#x27;branch&#x27;: &#x27;release&#x27;&#125;</span><br><span class="line">Plug &#x27;Yggdroot/LeaderF&#x27;, &#123; &#x27;do&#x27;: &#x27;:LeaderfInstallCExtension&#x27; &#125;</span><br><span class="line">Plug &#x27;catppuccin/nvim&#x27;, &#123; &#x27;as&#x27;: &#x27;catppuccin&#x27; &#125;</span><br><span class="line"></span><br><span class="line">call plug#end()</span><br><span class="line"></span><br><span class="line">colorscheme catppuccin-mocha</span><br><span class="line"></span><br><span class="line">let g:syntastic_c_checkers=[&#x27;clang_tidy&#x27;]</span><br><span class="line">let g:syntastic_cpp_checkers=[&#x27;clang_tidy&#x27;]</span><br><span class="line">let g:syntastic_always_populate_loc_list = 1</span><br><span class="line">let g:syntastic_auto_loc_list = 1</span><br><span class="line">let g:syntastic_check_on_open = 1</span><br><span class="line">let g:syntastic_check_on_wq = 0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">let mapleader=&quot;\&lt;space&gt;&quot;</span><br><span class="line">nnoremap &lt;leader&gt;ev :vsp $MYVIMRC&lt;CR&gt;</span><br><span class="line">nnoremap &lt;leader&gt;sv :source $MYVIMRC&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot;Begin of LeaderF&quot;</span><br><span class="line"></span><br><span class="line">&quot; don&#x27;t show the help in normal mode</span><br><span class="line">let g:Lf_HideHelp = 1</span><br><span class="line">let g:Lf_UseCache = 0</span><br><span class="line">let g:Lf_UseVersionControlTool = 0</span><br><span class="line">let g:Lf_IgnoreCurrentBufferName = 1</span><br><span class="line">&quot; popup mode</span><br><span class="line">let g:Lf_WindowPosition = &#x27;popup&#x27;</span><br><span class="line">let g:Lf_StlSeparator = &#123; &#x27;left&#x27;: &quot;\ue0b0&quot;, &#x27;right&#x27;: &quot;\ue0b2&quot;, &#x27;font&#x27;: &quot;DejaVu Sans Mono for Powerline&quot; &#125;</span><br><span class="line">let g:Lf_PreviewResult = &#123;&#x27;Function&#x27;: 0, &#x27;BufTag&#x27;: 0 &#125;</span><br><span class="line"></span><br><span class="line">let g:Lf_ShortcutF = &quot;&lt;C-f&gt;&quot;</span><br><span class="line">let g:Lf_DefaultExternalTool=&#x27;rg&#x27;</span><br><span class="line"></span><br><span class="line">let g:Lf_WorkingDirectoryMode = &#x27;AF&#x27;</span><br><span class="line">let g:Lf_RootMarkers = [&#x27;.git&#x27;, &#x27;.svn&#x27;, &#x27;.hg&#x27;, &#x27;.project&#x27;, &#x27;.root&#x27;]</span><br><span class="line"></span><br><span class="line">nmap &lt;leader&gt;fr &lt;Plug&gt;LeaderfRgPrompt</span><br><span class="line">nmap &lt;leader&gt;fra &lt;Plug&gt;LeaderfRgCwordLiteralNoBoundary</span><br><span class="line">nmap &lt;leader&gt;frb &lt;Plug&gt;LeaderfRgCwordLiteralBoundary</span><br><span class="line">nmap &lt;leader&gt;frc &lt;Plug&gt;LeaderfRgCwordRegexNoBoundary</span><br><span class="line">nmap &lt;leader&gt;frd &lt;Plug&gt;LeaderfRgCwordRegexBoundary</span><br><span class="line">vmap &lt;leader&gt;fra &lt;Plug&gt;LeaderfRgVisualLiteralNoBoundary</span><br><span class="line">vmap &lt;leader&gt;frb &lt;Plug&gt;LeaderfRgVisualLiteralBoundary</span><br><span class="line">vmap &lt;leader&gt;frc &lt;Plug&gt;LeaderfRgVisualRegexNoBoundary</span><br><span class="line">vmap &lt;leader&gt;frd &lt;Plug&gt;LeaderfRgVisualRegexBoundary</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot;end of LeaderF&quot;</span><br><span class="line"></span><br><span class="line">&quot;Begin of coc-nvim config&quot;</span><br><span class="line"></span><br><span class="line">set signcolumn=yes</span><br><span class="line">inoremap &lt;silent&gt;&lt;expr&gt; &lt;Tab&gt;</span><br><span class="line">      \ coc#pum#visible() ? coc#pum#next(1) :</span><br><span class="line">      \ CheckBackspace() ? &quot;\&lt;Tab&gt;&quot; :</span><br><span class="line">      \ coc#refresh()</span><br><span class="line">inoremap &lt;expr&gt;&lt;S-TAB&gt; coc#pum#visible() ? coc#pum#prev(1) : &quot;\&lt;C-h&gt;&quot;</span><br><span class="line"></span><br><span class="line">&quot; Make &lt;CR&gt; to accept selected completion item or notify coc.nvim to format</span><br><span class="line">&quot; &lt;C-g&gt;u breaks current undo, please make your own choice</span><br><span class="line">inoremap &lt;silent&gt;&lt;expr&gt; &lt;CR&gt; coc#pum#visible() ? coc#pum#confirm()</span><br><span class="line">                              \: &quot;\&lt;C-g&gt;u\&lt;CR&gt;\&lt;c-r&gt;=coc#on_enter()\&lt;CR&gt;&quot;</span><br><span class="line"></span><br><span class="line">function! CheckBackspace() abort</span><br><span class="line">  let col = col(&#x27;.&#x27;) - 1</span><br><span class="line">  return !col || getline(&#x27;.&#x27;)[col - 1]  =~# &#x27;\s&#x27;</span><br><span class="line">endfunction</span><br><span class="line"></span><br><span class="line">autocmd CursorHold * silent call CocActionAsync(&#x27;highlight&#x27;)</span><br><span class="line">xmap &lt;C-I&gt; &lt;Plug&gt;(coc-format)</span><br><span class="line">xmap &lt;C&gt;&lt;S&gt;I &lt;Plug&gt;(coc-format)</span><br><span class="line">nmap &lt;C-I&gt; &lt;Plug&gt;(coc-format)</span><br><span class="line">nmap &lt;C&gt;&lt;S&gt;I &lt;Plug&gt;(coc-format)</span><br><span class="line"></span><br><span class="line">let g:coc_global_extensions = [ </span><br><span class="line">                                                \ &#x27;coc-json&#x27;, </span><br><span class="line">                                                \ &#x27;coc-clangd&#x27;,</span><br><span class="line">                                                \ &#x27;coc-git&#x27;</span><br><span class="line">                                                \]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nmap &lt;leader&gt;c :CocCommand&lt;space&gt;</span><br><span class="line"></span><br><span class="line">&quot;end of coc-nvim config&quot;</span><br><span class="line"></span><br><span class="line">&quot;Begin of nerd tree&quot;</span><br><span class="line"></span><br><span class="line">autocmd StdinReadPre * let s:std_in=1</span><br><span class="line">autocmd VimEnter * NERDTree | if argc() &gt; 0 || exists(&quot;s:std_in&quot;) | wincmd p | endif</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * if tabpagenr(&#x27;$&#x27;) == 1 &amp;&amp; winnr(&#x27;$&#x27;) == 1 &amp;&amp; exists(&#x27;b:NERDTree&#x27;) &amp;&amp; b:NERDTree.isTabTree() | quit | endif</span><br><span class="line"></span><br><span class="line">autocmd BufEnter * if bufname(&#x27;#&#x27;) =~ &#x27;NERD_tree_\d\+&#x27; &amp;&amp; bufname(&#x27;%&#x27;) !~ &#x27;NERD_tree_\d\+&#x27; &amp;&amp; winnr(&#x27;$&#x27;) &gt; 1 |</span><br><span class="line">    \ let buf=bufnr() | buffer# | execute &quot;normal! \&lt;C-W&gt;w&quot; | execute &#x27;buffer&#x27;.buf | endif</span><br><span class="line"></span><br><span class="line">let g:NERDTreeDirArrowExpandable = &#x27;▸&#x27;</span><br><span class="line">let g:NERDTreeDirArrowCollapsible = &#x27;▾&#x27;</span><br><span class="line"></span><br><span class="line">&quot;end of nerd tree&quot;</span><br><span class="line"></span><br><span class="line">&quot;Begin fast key for window key config&quot;</span><br><span class="line"></span><br><span class="line">nnoremap &lt;A-left&gt; &lt;C-w&gt;h</span><br><span class="line">nnoremap &lt;A-right&gt; &lt;C-w&gt;l</span><br><span class="line">nnoremap &lt;A-up&gt; &lt;C-w&gt;k</span><br><span class="line">nnoremap &lt;A-down&gt; &lt;C-w&gt;j</span><br><span class="line"></span><br><span class="line">nnoremap &lt;S-up&gt; &lt;C-w&gt;s</span><br><span class="line">nnoremap &lt;S-down&gt; &lt;C-w&gt;s&lt;C-w&gt;j</span><br><span class="line">nnoremap &lt;S-left&gt; &lt;C-w&gt;v</span><br><span class="line">nnoremap &lt;S-right&gt; &lt;C-w&gt;v&lt;C-w&gt;l</span><br><span class="line">nnoremap &lt;S-h&gt; :sp&lt;space&gt;</span><br><span class="line">nnoremap &lt;S-v&gt; :svp&lt;space&gt;</span><br><span class="line"></span><br><span class="line">nnoremap &lt;leader&gt;oh :sp&lt;space&gt;</span><br><span class="line">nnoremap &lt;leader&gt;ov :svp&lt;space&gt;</span><br><span class="line"></span><br><span class="line">nnoremap &lt;C-q&gt; &lt;C-w&gt;q</span><br><span class="line">nnoremap &lt;C-s&gt; :w&lt;CR&gt;</span><br><span class="line">inoremap &lt;C-s&gt; &lt;ESC&gt;:w&lt;CR&gt;i</span><br><span class="line">inoremap &lt;C-q&gt; &lt;ESC&gt;:w&lt;CR&gt;&lt;C-w&gt;q</span><br><span class="line"></span><br><span class="line">&quot;end of window ff-key config&quot;</span><br><span class="line"></span><br><span class="line">&quot;Begin of lightline&quot;</span><br><span class="line"></span><br><span class="line">let g:lightline = &#123;</span><br><span class="line">                                                \&#x27;colorscheme&#x27;: &#x27;PaperColor&#x27;</span><br><span class="line">                                \&#125;</span><br><span class="line"></span><br><span class="line">&quot;end of lightline&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Tmux">Tmux</h2>
+<p>配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">set-option -g prefix C-x</span><br><span class="line">unbind C-a</span><br><span class="line">bind C-x send-prefix</span><br><span class="line"></span><br><span class="line">bind -r Left select-pane -L</span><br><span class="line">bind -r Down select-pane -D </span><br><span class="line">bind -r Up select-pane -U </span><br><span class="line">bind -r Right select-pane -R </span><br><span class="line"></span><br><span class="line">bind -r C-w split-window -vb</span><br><span class="line">bind -r C-s split-window -v </span><br><span class="line">bind -r C-a split-window -hb</span><br><span class="line">bind -r C-d split-window -h</span><br><span class="line"></span><br><span class="line">bind -r C-q kill-pane</span><br><span class="line"></span><br><span class="line">unbind &lt;</span><br><span class="line">unbind &gt;</span><br><span class="line">bind -r &gt; previous-window </span><br><span class="line">bind -r &lt; next-window</span><br></pre></td></tr></table></figure>
+<p>基本常用的窗口命令就是 vim 的需要先 <code>C-x</code>。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blog.wcysite.com">泠妄</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.wcysite.com/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/">https://blog.wcysite.com/2024/一些我的Vim-tmux配置备忘/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.wcysite.com" target="_blank">妄尘驿</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/vim-tmux-config/">vim, tmux, config</a></div><div class="post_share"><div class="social-share" data-image="https://img.xjh.me/random_img.php?return=302&amp;tmp=2" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2024/%E6%9D%A5%E4%BD%BF%E7%94%A8Worker%E5%81%9A%E5%85%8D%E8%B4%B9%E7%9A%84Email%E6%9C%8D%E5%8A%A1%E5%99%A8/"><img class="prev-cover" src="https://api.paugram.com/wallpaper/?tmp=10" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">来使用Worker做免费的Email服务器!</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://js-d.wcysite.com/gh/wychlw/homepage@main/assets/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">泠妄</div><div class="author-info__description">生活在妄想中，是个废物喵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wychlw" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:LingWang@wcysite.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/LingWangMoe" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://t.me/lingwangmoe" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vim"><span class="toc-number">1.1.</span> <span class="toc-text">Vim</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.1.1.</span> <span class="toc-text">基础设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">1.1.2.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#lightline"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">lightline</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nerdtree"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">nerdtree</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.2.2.1.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LeaderF"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">LeaderF</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#coc-nvim"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">coc.nvim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#catppuccin-nvim"><span class="toc-number">1.1.2.5.</span> <span class="toc-text">catppuccin&#x2F;nvim</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.1.3.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.4.</span> <span class="toc-text">总配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tmux"><span class="toc-number">1.2.</span> <span class="toc-text">Tmux</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/" title="一些我的 Vim&amp;tmux 配置备忘"><img src="https://img.xjh.me/random_img.php?return=302&amp;tmp=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一些我的 Vim&amp;tmux 配置备忘"/></a><div class="content"><a class="title" href="/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/" title="一些我的 Vim&amp;tmux 配置备忘">一些我的 Vim&amp;tmux 配置备忘</a><time datetime="2024-04-01T03:16:44.000Z" title="发表于 2024-04-01 11:16:44">2024-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/%E6%9D%A5%E4%BD%BF%E7%94%A8Worker%E5%81%9A%E5%85%8D%E8%B4%B9%E7%9A%84Email%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="来使用Worker做免费的Email服务器!"><img src="https://api.paugram.com/wallpaper/?tmp=10" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="来使用Worker做免费的Email服务器!"/></a><div class="content"><a class="title" href="/2024/%E6%9D%A5%E4%BD%BF%E7%94%A8Worker%E5%81%9A%E5%85%8D%E8%B4%B9%E7%9A%84Email%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="来使用Worker做免费的Email服务器!">来使用Worker做免费的Email服务器!</a><time datetime="2024-03-01T12:16:56.000Z" title="发表于 2024-03-01 20:16:56">2024-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/%E6%9D%A5%E8%B0%88%E8%B0%8864%E4%BD%8D%E4%B9%98%E6%B3%95%E5%99%A8%E5%92%8C%E9%99%A4%E6%B3%95%E5%99%A8%E5%90%A7%EF%BC%81/" title="来谈谈64位乘法器和除法吧！"><img src="https://img.xjh.me/random_img.php?return=302&amp;tmp=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="来谈谈64位乘法器和除法吧！"/></a><div class="content"><a class="title" href="/2023/%E6%9D%A5%E8%B0%88%E8%B0%8864%E4%BD%8D%E4%B9%98%E6%B3%95%E5%99%A8%E5%92%8C%E9%99%A4%E6%B3%95%E5%99%A8%E5%90%A7%EF%BC%81/" title="来谈谈64位乘法器和除法吧！">来谈谈64位乘法器和除法吧！</a><time datetime="2023-03-16T00:13:12.000Z" title="发表于 2023-03-16 08:13:12">2023-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA64%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8%EF%BC%81/" title="创建一个64位加法器！"><img src="https://api.paugram.com/wallpaper/?tmp=7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创建一个64位加法器！"/></a><div class="content"><a class="title" href="/2023/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA64%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8%EF%BC%81/" title="创建一个64位加法器！">创建一个64位加法器！</a><time datetime="2023-03-13T16:11:45.000Z" title="发表于 2023-03-14 00:11:45">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/%E5%85%B3%E4%BA%8EWhitebox%20GAN%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/" title="关于Whitebox GAN的一些碎碎念"><img src="https://api.paugram.com/wallpaper/?tmp=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于Whitebox GAN的一些碎碎念"/></a><div class="content"><a class="title" href="/2023/%E5%85%B3%E4%BA%8EWhitebox%20GAN%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/" title="关于Whitebox GAN的一些碎碎念">关于Whitebox GAN的一些碎碎念</a><time datetime="2023-03-12T10:47:00.000Z" title="发表于 2023-03-12 18:47:00">2023-03-12</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://img.xjh.me/random_img.php?return=302&amp;tmp=2')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 泠妄</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20210741" target="_blank">萌ICP备20210741号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-butterfly/4.5.1/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-butterfly/4.5.1/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-butterfly/4.5.1/js/tw_cn.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? '' : ''
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://cdnjs.cloudflare.com/ajax/libs/waline/2.13.0/waline.min.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline-738z.vercel.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('https://cdnjs.cloudflare.com/ajax/libs/waline/2.13.0/waline.min.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const loadWaline = () => {
+      Waline.RecentComments({
+        serverURL: 'https://waline-738z.vercel.app/',
+        count: 6
+      }).then(({comments}) => {
+        const walineArray = comments.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.insertedAt,
+          }
+        })
+        saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+        generateHtml(walineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+    }
+
+    if (typeof Waline === 'function') loadWaline() 
+    else getScript('https://cdnjs.cloudflare.com/ajax/libs/waline/2.13.0/waline.min.js').then(loadWaline)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

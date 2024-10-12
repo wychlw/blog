@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>踩坑DN42 p1 注册 | 妄尘驿</title><meta name="author" content="泠妄"><meta name="copyright" content="泠妄"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="这篇文章可能会存在不精确、错误、过时等问题。遇到时请务必留言给喵喵修改！！ DN42简介 DN42（Decentralized Network 42）是一个虚拟的去中心化的网络。其中的节点用VPN相连。网络中使用了大量现代互联网采用的技术，如BGP、DNS等。 可以说，它模拟出了一个小型的全球互联网。 需要注意的是，DN42并不提供匿名化、规避审查的服务 它更像一个用来在加入现实互联网之前进行练手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="踩坑DN42 p1 注册">
+<meta property="og:url" content="https://blog.wcysite.com/2021/%E8%B8%A9%E5%9D%91DN42-p1-%E6%B3%A8%E5%86%8C/index.html">
+<meta property="og:site_name" content="妄尘驿">
+<meta property="og:description" content="这篇文章可能会存在不精确、错误、过时等问题。遇到时请务必留言给喵喵修改！！ DN42简介 DN42（Decentralized Network 42）是一个虚拟的去中心化的网络。其中的节点用VPN相连。网络中使用了大量现代互联网采用的技术，如BGP、DNS等。 可以说，它模拟出了一个小型的全球互联网。 需要注意的是，DN42并不提供匿名化、规避审查的服务 它更像一个用来在加入现实互联网之前进行练手">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://api.paugram.com/wallpaper/?tmp=3">
+<meta property="article:published_time" content="2021-03-05T04:55:32.000Z">
+<meta property="article:modified_time" content="2024-10-12T08:50:30.566Z">
+<meta property="article:author" content="泠妄">
+<meta property="article:tag" content="tech">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://api.paugram.com/wallpaper/?tmp=3"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.wcysite.com/2021/%E8%B8%A9%E5%9D%91DN42-p1-%E6%B3%A8%E5%86%8C/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"作者: 泠妄","link":"链接: ","source":"来源: 妄尘驿","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '踩坑DN42 p1 注册',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-12 16:50:30'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/main.css"><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="妄尘驿" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="妄尘驿" type="application/rss+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://js-d.wcysite.com/gh/wychlw/homepage@main/assets/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.wcysite.com/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 博客首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们喵</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我？</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其它</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/privacy-policy/"><span> privacy-policy</span></a></li><li><a class="site-page child" href="/links-apply/"><span> 友联申请</span></a></li><li><a class="site-page child" href="/atom.xml"><span> rss(atom)</span></a></li><li><a class="site-page child" href="/rss2.xml"><span> rss(rss2)</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://api.paugram.com/wallpaper/?tmp=3')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">妄尘驿</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.wcysite.com/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 博客首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们喵</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我？</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 其它</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/privacy-policy/"><span> privacy-policy</span></a></li><li><a class="site-page child" href="/links-apply/"><span> 友联申请</span></a></li><li><a class="site-page child" href="/atom.xml"><span> rss(atom)</span></a></li><li><a class="site-page child" href="/rss2.xml"><span> rss(rss2)</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">踩坑DN42 p1 注册</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-03-05T04:55:32.000Z" title="发表于 2021-03-05 12:55:32">2021-03-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-12T08:50:30.566Z" title="更新于 2024-10-12 16:50:30">2024-10-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/note/">note</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="踩坑DN42 p1 注册"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>这篇文章可能会存在不精确、错误、过时等问题。遇到时请务必留言给喵喵修改！！</p>
+<h1>DN42简介</h1>
+<p>DN42（Decentralized Network 42）是一个虚拟的去中心化的网络。其中的节点用VPN相连。网络中使用了大量现代互联网采用的技术，如BGP、DNS等。<br>
+可以说，它模拟出了一个小型的全球互联网。</p>
+<p>需要注意的是，DN42<strong>并不提供匿名化、规避审查</strong>的服务<br>
+它更像一个用来在加入现实互联网之前进行练手和测试的网络。（或者<a target="_blank" rel="noopener" href="https://blog.cloudflare.com/how-verizon-and-a-bgp-optimizer-knocked-large-parts-of-the-internet-offline-today/">学习怎么破坏半个互联网</a>（<s>不要</s>）</p>
+<p>在DN42里，你要像现实中一样去在互联网分配机构（如<a target="_blank" rel="noopener" href="https://www.icann.org/">ICANN</a>）注册你的AS、IP地址池等，并搭建BGP服务然后和别人进行peer来加入网络。</p>
+<p>唯一和现实的区别嘛…不用交一大笔钱！</p>
+<p>整个DN42的地址池在172.20.0.0/14与fd00::/8上，均为内网地址，因而哪怕你把整个DN42的网络炸掉，也不会对现实网络产生影响（千万千万不要故意这么做！！！）</p>
+<h1>注册流程</h1>
+<p>在喵喵体验下来，整一个注册流程还是比较简单的，应该可以在几小时内完成。但是如果你的注册中有错误的话，由于时差的关系，每一天才能进行1RTT，这就非常耗时了。</p>
+<p>官方的流程指导在<a target="_blank" rel="noopener" href="https://dn42.dev/howto/Getting-Started">这里</a>，DN42的仓库在<a target="_blank" rel="noopener" href="https://git.dn42.dev/dn42/registry/src/branch/master/README.md">这里</a>（需要注意，git是必须注册后才能看到的）</p>
+<p>另外由于文件名中会出现 * : : / * 等Windows不允许的符号，请<strong>务必</strong>在Linux、Mac OS环境下运行（虚拟机／WSL就okk）<br>
+（BSD也不是不行，但…）</p>
+<p>那么，让我们开始吧！</p>
+<p><strong>注：接下来的所有<code>FOO</code>或<code>WYCHLW</code>请替换为你自己的用户名，其它的参数也记得替换成你自己的！！</strong></p>
+<h2 id="克隆仓库">克隆仓库</h2>
+<ul>
+<li>
+<p>首先你需要去在<a target="_blank" rel="noopener" href="https://git.dn42.dev/">DN42的git</a>上注册你的账号</p>
+</li>
+<li>
+<p>然后clone <a target="_blank" rel="noopener" href="https://git.dn42.dev/dn42/registry">DN42的仓库</a><br>
+<code>git clone https://git.dn42.dev/dn42/registry.git</code></p>
+</li>
+<li>
+<p>新建一个branch，以&lt;日期&gt;-<FOO>/&lt;分支名&gt;命名，例如</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b wychlw-20210303/register</span><br><span class="line">git push --set-upstream origin wychlw-20210303/register</span><br></pre></td></tr></table></figure>
+<h2 id="注册信息">注册信息</h2>
+<p>然后你需要在这个新的branch里创建一系列的文件并填上自己的信息</p>
+<p><strong>注意！在接下来的文件里项目的名称和值之间有一长串空格，空格的长度不能自定！！要求是名称＋冒号＋空格的字符数为20</strong></p>
+<h3 id="创建maintainer">创建maintainer</h3>
+<p>maintainer，即维护者，代表了你的账户</p>
+<p><strong>需要注意！！这里需要你的PGP密钥来验证身份生成教程可以去看另外的文章</strong></p>
+<p>创建 <code>data/mnter/FOO-MNT</code> ，并向其中写入以下信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mntner:             FOO-MNT</span><br><span class="line">admin-c:            FOO-DN42</span><br><span class="line">tech-c:             FOO-DN42</span><br><span class="line">mnt-by:             FOO-MNT</span><br><span class="line">auth:               pgp-fingerprint 0123456789ABCDEF0123456789ABCDEF01234567</span><br><span class="line">source:             DN42</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中的mnter就是你的账户</li>
+<li>admin-c和tech-c代表了管理员和技术员，指向了接下来要创建的person。当然，你可以让这是两个人，自行更改即可。</li>
+<li>auth这里填你GPG签名公钥的指纹。当然你也可以用SSH密钥，设置方法可以看官方文档。需要注意，SSH与GPG至少要有一种！</li>
+<li>GPG可以看喵博客里的另一篇文章，（如果没有就是喵喵咕了（））SSH…Google一下肯定有教程的</li>
+</ul>
+<h4 id="上传你的公钥到keyserver">上传你的公钥到keyserver</h4>
+<p>建议将其上传到 <code>hkp://pool.sks-keyservers.net</code> ，喵之前用了另外一个keyserver，结果管理员那边说找不到<br>
+<code>gpg --send-keys [密钥ID] --keyserver hkp://pool.sks-keyservers.net</code></p>
+<h3 id="创建person">创建person</h3>
+<p>person，就是个人信息。这里需要填的信息比起现实来说少了许多（只要一个邮箱），现实中还会需要个人／公司的真实身份等</p>
+<p>创建 <code>data/person/FOO-DN42</code> ，并向其中写入以下信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">person:             &lt;你的昵称，如Ling Wang&gt;</span><br><span class="line">e-mail:             foo@example.com</span><br><span class="line">nic-hdl:            FOO-DN42</span><br><span class="line">mnt-by:             FOO-MNT</span><br><span class="line">source:             DN42</span><br></pre></td></tr></table></figure>
+<ul>
+<li>nic-hdl必须以 <code>-DN42</code> 结尾，而mnt-by指向你刚刚创建的mnter文件</li>
+<li>其中e-mail是必需的</li>
+<li>如果你想的话，也可以添加其它的信息，例如：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">twitter:            example</span><br><span class="line">qq:                 12345678</span><br></pre></td></tr></table></figure>
+<p>等等。<br>
+需要注意！以上信息都会被公开！</p>
+<h3 id="orgination">orgination</h3>
+<p>喵喵在这里大胆的假设一下，应该没人会注册一个组织吧…当然还是把模板放在这里啦～</p>
+<p>创建 <code>data/organisation/ORG-&lt;你的组织名&gt;</code>，然后：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">organisation:       ORG-FOO</span><br><span class="line">org-name:           Foo Organisation</span><br><span class="line">admin-c:            FOO-DN42</span><br><span class="line">tech-c:             FOO-DN42</span><br><span class="line">mnt-by:             FOO-MNT</span><br><span class="line">source:             DN42</span><br></pre></td></tr></table></figure>
+<h3 id="注册ASN号">注册ASN号</h3>
+<p>国际互联网中预留了ASN，范围是4200000000-4294967294，而DN42使用了其中的4242420000-<strong>4242423999</strong> **（只到3999，剩下的还未开放注册！！）</p>
+<p>挑选一个喜欢且没有被别人占用的，例如AS4242423410（这个是喵喵的！）<br>
+创建文件 <code>data/aut-num/AS4242423410</code> 然后填入以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">aut-num:            AS4242423410</span><br><span class="line">as-name:            AS for WYCHLW Network</span><br><span class="line">admin-c:            WYCHLW-DN42</span><br><span class="line">tech-c:             WYCHLW-DN42</span><br><span class="line">mnt-by:             WYCHLW-MNT</span><br><span class="line">source:             DN42</span><br></pre></td></tr></table></figure>
+<p>当然，假如你有自己的AS号的话，（是大佬！留个言教喵喵呜～！）你可以使用自己的AS号（当然需要在PR里说明一下）。<br>
+但是这么做会带来一些问题：DN42使用的VPN网络，一般默认使用ASN的后五位，所以你在和别人peer的时候，可能会需要多几轮RTT进行协商了</p>
+<p>喵喵并没有自己真实的ASN号，于是…并不知道用真实ASN注册的流程。可能的话务必告诉喵喵，喵喵补充一下</p>
+<h3 id="选择你的IPv6地址">选择你的IPv6地址</h3>
+<p>这都2021了，当然得来IPv6咯</p>
+<p>DN42内的IPv6处于fd00::/8之内，一般来说，每个人的地址块大小为/48，大概你一辈子也用不完。</p>
+<p>一般而言，选取IPv6遵循随机生成的原则。你可以使用<a target="_blank" rel="noopener" href="https://simpledns.plus/private-ipv6">这个工具</a>来生成一个前缀，然后截取/48的部分</p>
+<p>当然要是你执意要自己定（例如1919810之类的），也不是不可以。但是要注意，由于DN42的网络与其它的一些相似的网络（如Neo network）相互peer，你的IP可能会和其它人的重合，然后，BOOM。<br>
+（于是，非常不建议喵）<br>
+（毕竟可以取一个自己喜欢的域名解析上去就行了喵）</p>
+<p>在 <code>data/inet6num/&lt;你IP前缀的最简形式&gt;+_48</code> 建立文件，如 <code>data/inet6num/fdf6:774:73c3::_48</code> ，并填写以下内容（自行更换喵）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">inet6num:           fdf6:0774:73c3:0000:0000:0000:0000:0000 - fdf6:0774:73c3:ffff:ffff:ffff:ffff:ffff</span><br><span class="line">cidr:               fdf6:774:73c3::/48</span><br><span class="line">netname:            WYCHLW-NETWORK</span><br><span class="line">descr:              Network of WYCHLW</span><br><span class="line">admin-c:            WYCHLW-DN42</span><br><span class="line">tech-c:             WYCHLW-DN42</span><br><span class="line">mnt-by:             WYCHLW-MNT</span><br><span class="line">status:             ASSIGNED</span><br><span class="line">source:             DN42</span><br><span class="line">country:            cn</span><br><span class="line">nserver:            ns1.wcysite.dn42</span><br></pre></td></tr></table></figure>
+<ul>
+<li>inet6num是你IP池的范围</li>
+<li>cidr就是你的IP前缀，用cidr的形式填写</li>
+<li>netname是显示在网络结构中的名字，一般名字加-NETWORK</li>
+<li>descr是该地址池的简介，随便填可以</li>
+<li>nserver指IP地址反向解析的ns服务器的地址，不知道或不使用可以直接删掉</li>
+</ul>
+<h4 id="IPv6-router">IPv6 router</h4>
+<p>router是用来授权某个AS使用这个地址池的对象</p>
+<p>在例如 <code>data/route6/fdf6:774:73c3::_48</code> 处创建文件，然后填写以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">route6:             fdf6:774:73c3::/48</span><br><span class="line">origin:             AS4242423410</span><br><span class="line">mnt-by:             WYCHLW-MNT</span><br><span class="line">source:             DN42</span><br></pre></td></tr></table></figure>
+<ul>
+<li>origin填写的就是你上面注册的ASN号</li>
+</ul>
+<h3 id="你可能还会想要个IPv4？">你可能还会想要个IPv4？</h3>
+<p>写在前面：IPv4非常！非常！非常！珍贵，哪怕是在DN42里。所以不要申请过多的IPv4地址</p>
+<p>一般来说，/29有6个可用地址，是完全够自行摸索DN42的了。要是不够的话，/28的14个是完全够用的了。尽管DN42默认分配给你/27，但为了这个网络的可持续发展（而且你以后还可以扩展自己的地址池的！），从少吧还是。</p>
+<p>DN42默认能直接给你分配的最大地址是/26，这已经允许你拥有62个可用IP了…</p>
+<p>要是你真的需要超过了上面的那个数字的话…你该不会是要把整个公司接入DN42吧？！</p>
+<p>总之这个时候，你需要去<a target="_blank" rel="noopener" href="https://wiki.dn42.us/services/IRC">DN42的IRC频道</a>其中的public Internet里面 或者 <a target="_blank" rel="noopener" href="https://wiki.dn42.us/contact#contact_mailing-list">这里面的邮件列表</a>进行详细说明来让大家进行投票同意。</p>
+<p><strong>总之尽量少申请IPv4地址！</strong><br>
+然后比如你现在想要申请一个/28的IP地址，而可用列表（地址在下面）里没有的话，<strong>不要申请一个/27，而是把/27分成两个/28，申请前面的部分！</strong>（from DN42官方）</p>
+<p>总之，你可以在<a target="_blank" rel="noopener" href="https://dn42.us/peers/free">这里</a>看到并选取剩余的IP地址</p>
+<p>然后和上面IPv6的流程基本一样，依然举例：<br>
+（等等突然想到提醒一下，记得把东西换成自己的呀！）<br>
+<code>data/inetnum/172.20.41.48_28</code> 里面填写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">inetnum:            172.20.41.48 - 172.20.41.63</span><br><span class="line">cidr:               172.20.41.48/28</span><br><span class="line">netname:            WYCHLW-NETWORK</span><br><span class="line">admin-c:            WYCHLW-DN42</span><br><span class="line">tech-c:             WYCHLW-DN42</span><br><span class="line">mnt-by:             WYCHLW-MNT</span><br><span class="line">status:             ASSIGNED</span><br><span class="line">source:             DN42</span><br><span class="line">country:            cn</span><br><span class="line">nserver:            ns1.wcysite.dn42</span><br></pre></td></tr></table></figure>
+<p>然后， <code>data/route/172.20.41.48_28</code> 里面：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">route:              172.20.41.48/28</span><br><span class="line">origin:             AS4242423410</span><br><span class="line">mnt-by:             WYCHLW-MNT</span><br><span class="line">source:             DN42</span><br></pre></td></tr></table></figure>
+<h3 id="域名以及DNS（非必须）">域名以及DNS（非必须）</h3>
+<p>由于现在使用DN42的人还是很少，你应该能很简单找到自己中意的域名</p>
+<p>当然这一步不是必需的，你可以选择以后再来做这一步</p>
+<p>DN42内部的域名以*.dn42*结尾。</p>
+<p>而关于DNS解析，你要自己建立自己的权威DNS解析服务器（如使用Power DNS，喵喵大概也会发篇这个的博客？）</p>
+<p>创建 <code>data/dns/wcysite.dn42</code> 然后填写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">domain:             wcysite.dn42</span><br><span class="line">admin-c:            WYCHLW-DN42</span><br><span class="line">tech-c:             WYCHLW-DN42</span><br><span class="line">mnt-by:             WYCHLW-MNT</span><br><span class="line">nserver:            ns1.wcysite.dn42 172.20.41.49</span><br><span class="line">nserver:            ns1.wcysite.dn42 fdf6:0774:73c3:53::1</span><br><span class="line">source:             DN42</span><br></pre></td></tr></table></figure>
+<ul>
+<li>nserver就是你的权威域名解析服务器以及地址喵～</li>
+</ul>
+<h2 id="发起PR">发起PR</h2>
+<p>首先，你应该用自带的脚本格式化并检查一下文件是否正确</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fmt-my-stuff &lt;FOO&gt;-MNT</span><br><span class="line">check-my-stuff &lt;FOO&gt;-MNT</span><br><span class="line">check-pol origin/master &lt;FOO&gt;</span><br></pre></td></tr></table></figure>
+<p>接下来， <code>git add .</code> 添加文件，然后，<strong>使用PGP或SSH密钥签名commit</strong>！<br>
+执行 <code>git commit -S -m &quot;内容&quot;</code><br>
+（假如没有GPG密钥的话…用SSH签名了只有）</p>
+<p>假如你commit了多次的话，运行根目录下的脚本<br>
+<code>./squash-my-commits -S --push</code></p>
+<blockquote>
+<p>由于可能在你操作的期间有别人的更新，可以执行以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin master</span><br><span class="line">git checkout wychlw-20210303/register</span><br><span class="line"># 保留第一行的 pick，将之后的 pick 全部改成 squash</span><br><span class="line">git rebase -i -S origin/master</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>然后 <code>git push -f</code> 上去，最后检查一遍有没有错误之后，发起PR等待别人merge（记得用英文喵）</p>
+<p>加入有错的话，管理者会在PR下面回复你，这个时候按照要求改好之后直接push，新的更改会被自动merge到PR里面了喵</p>
+<hr>
+<p>未完待续…</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blog.wcysite.com">泠妄</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.wcysite.com/2021/%E8%B8%A9%E5%9D%91DN42-p1-%E6%B3%A8%E5%86%8C/">https://blog.wcysite.com/2021/踩坑DN42-p1-注册/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.wcysite.com" target="_blank">妄尘驿</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/tech/">tech</a></div><div class="post_share"><div class="social-share" data-image="https://api.paugram.com/wallpaper/?tmp=3" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/%E8%AE%B0%E4%B8%87%E4%BA%8B%E8%BE%BE%E5%80%9F%E8%AE%B0%E5%8D%A1%E7%9A%84%E7%94%B3%E8%AF%B7/"><img class="prev-cover" src="https://img.xjh.me/random_img.php?return=302&amp;tmp=10" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">记万事达借记卡的申请</div></div></a></div><div class="next-post pull-right"><a href="/2021/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAKMS%E6%9C%8D%E5%8A%A1%E5%99%A8/"><img class="next-cover" src="https://api.paugram.com/wallpaper/?tmp=6" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">搭建一个KMS服务器</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/%E4%B8%80%E7%A7%8D%E5%88%A9%E7%94%A8v2ray%E6%90%AD%E5%BB%BAwireguard-VPN%E7%9A%84%E6%96%B9%E6%B3%95/" title="一种利用机场搭建wireguard VPN的方法"><img class="cover" src="https://img.xjh.me/random_img.php?return=302&tmp=7" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-10-12</div><div class="title">一种利用机场搭建wireguard VPN的方法</div></div></a></div><div><a href="/2022/%E5%85%B3%E4%BA%8E%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/" title="关于符号链接的一些碎碎念"><img class="cover" src="https://img.xjh.me/random_img.php?return=302&tmp=4" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-10-12</div><div class="title">关于符号链接的一些碎碎念</div></div></a></div><div><a href="/2023/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA64%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8%EF%BC%81/" title="创建一个64位加法器！"><img class="cover" src="https://api.paugram.com/wallpaper/?tmp=7" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-10-12</div><div class="title">创建一个64位加法器！</div></div></a></div><div><a href="/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x0-%E5%B0%81%E8%A3%85%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" title="在C中面向对象:#0x0 封装、继承与多态"><img class="cover" src="https://img.xjh.me/random_img.php?return=302&tmp=5" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-10-12</div><div class="title">在C中面向对象:#0x0 封装、继承与多态</div></div></a></div><div><a href="/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x1-%E6%9D%A5-%E6%B3%A8%E5%86%8C-%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%90%A7/" title="在C中面向对象:#0x1 来&quot;注册&quot;一个对象吧~"><img class="cover" src="https://img.xjh.me/random_img.php?return=302&tmp=8" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-10-12</div><div class="title">在C中面向对象:#0x1 来&quot;注册&quot;一个对象吧~</div></div></a></div><div><a href="/2022/%E5%9C%A8C%E4%B8%AD%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-0x2-%E8%AE%A9%E6%88%91%E4%BB%AC%E6%9D%A5%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E8%BF%AD%E4%BB%A3%E5%99%A8%EF%BC%81/" title="在C中面向对象:#0x2 让我们来实现一个迭代器！"><img class="cover" src="https://img.xjh.me/random_img.php?return=302&tmp=6" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2024-10-12</div><div class="title">在C中面向对象:#0x2 让我们来实现一个迭代器！</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://js-d.wcysite.com/gh/wychlw/homepage@main/assets/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">泠妄</div><div class="author-info__description">生活在妄想中，是个废物喵</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/wychlw" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:LingWang@wcysite.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/LingWangMoe" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://t.me/lingwangmoe" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">DN42简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">注册流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="toc-number">2.1.</span> <span class="toc-text">克隆仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C%E4%BF%A1%E6%81%AF"><span class="toc-number">2.2.</span> <span class="toc-text">注册信息</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAmaintainer"><span class="toc-number">2.2.1.</span> <span class="toc-text">创建maintainer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8A%E4%BC%A0%E4%BD%A0%E7%9A%84%E5%85%AC%E9%92%A5%E5%88%B0keyserver"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">上传你的公钥到keyserver</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAperson"><span class="toc-number">2.2.2.</span> <span class="toc-text">创建person</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#orgination"><span class="toc-number">2.2.3.</span> <span class="toc-text">orgination</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E5%86%8CASN%E5%8F%B7"><span class="toc-number">2.2.4.</span> <span class="toc-text">注册ASN号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E4%BD%A0%E7%9A%84IPv6%E5%9C%B0%E5%9D%80"><span class="toc-number">2.2.5.</span> <span class="toc-text">选择你的IPv6地址</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IPv6-router"><span class="toc-number">2.2.5.1.</span> <span class="toc-text">IPv6 router</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E5%8F%AF%E8%83%BD%E8%BF%98%E4%BC%9A%E6%83%B3%E8%A6%81%E4%B8%AAIPv4%EF%BC%9F"><span class="toc-number">2.2.6.</span> <span class="toc-text">你可能还会想要个IPv4？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E4%BB%A5%E5%8F%8ADNS%EF%BC%88%E9%9D%9E%E5%BF%85%E9%A1%BB%EF%BC%89"><span class="toc-number">2.2.7.</span> <span class="toc-text">域名以及DNS（非必须）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E8%B5%B7PR"><span class="toc-number">2.3.</span> <span class="toc-text">发起PR</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/" title="一些我的 Vim&amp;tmux 配置备忘"><img src="https://img.xjh.me/random_img.php?return=302&amp;tmp=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一些我的 Vim&amp;tmux 配置备忘"/></a><div class="content"><a class="title" href="/2024/%E4%B8%80%E4%BA%9B%E6%88%91%E7%9A%84Vim-tmux%E9%85%8D%E7%BD%AE%E5%A4%87%E5%BF%98/" title="一些我的 Vim&amp;tmux 配置备忘">一些我的 Vim&amp;tmux 配置备忘</a><time datetime="2024-04-01T03:16:44.000Z" title="发表于 2024-04-01 11:16:44">2024-04-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/%E6%9D%A5%E4%BD%BF%E7%94%A8Worker%E5%81%9A%E5%85%8D%E8%B4%B9%E7%9A%84Email%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="来使用Worker做免费的Email服务器!"><img src="https://api.paugram.com/wallpaper/?tmp=10" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="来使用Worker做免费的Email服务器!"/></a><div class="content"><a class="title" href="/2024/%E6%9D%A5%E4%BD%BF%E7%94%A8Worker%E5%81%9A%E5%85%8D%E8%B4%B9%E7%9A%84Email%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="来使用Worker做免费的Email服务器!">来使用Worker做免费的Email服务器!</a><time datetime="2024-03-01T12:16:56.000Z" title="发表于 2024-03-01 20:16:56">2024-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/%E6%9D%A5%E8%B0%88%E8%B0%8864%E4%BD%8D%E4%B9%98%E6%B3%95%E5%99%A8%E5%92%8C%E9%99%A4%E6%B3%95%E5%99%A8%E5%90%A7%EF%BC%81/" title="来谈谈64位乘法器和除法吧！"><img src="https://img.xjh.me/random_img.php?return=302&amp;tmp=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="来谈谈64位乘法器和除法吧！"/></a><div class="content"><a class="title" href="/2023/%E6%9D%A5%E8%B0%88%E8%B0%8864%E4%BD%8D%E4%B9%98%E6%B3%95%E5%99%A8%E5%92%8C%E9%99%A4%E6%B3%95%E5%99%A8%E5%90%A7%EF%BC%81/" title="来谈谈64位乘法器和除法吧！">来谈谈64位乘法器和除法吧！</a><time datetime="2023-03-16T00:13:12.000Z" title="发表于 2023-03-16 08:13:12">2023-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA64%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8%EF%BC%81/" title="创建一个64位加法器！"><img src="https://api.paugram.com/wallpaper/?tmp=7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创建一个64位加法器！"/></a><div class="content"><a class="title" href="/2023/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA64%E4%BD%8D%E5%8A%A0%E6%B3%95%E5%99%A8%EF%BC%81/" title="创建一个64位加法器！">创建一个64位加法器！</a><time datetime="2023-03-13T16:11:45.000Z" title="发表于 2023-03-14 00:11:45">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/%E5%85%B3%E4%BA%8EWhitebox%20GAN%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/" title="关于Whitebox GAN的一些碎碎念"><img src="https://api.paugram.com/wallpaper/?tmp=2" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于Whitebox GAN的一些碎碎念"/></a><div class="content"><a class="title" href="/2023/%E5%85%B3%E4%BA%8EWhitebox%20GAN%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A2%8E%E7%A2%8E%E5%BF%B5/" title="关于Whitebox GAN的一些碎碎念">关于Whitebox GAN的一些碎碎念</a><time datetime="2023-03-12T10:47:00.000Z" title="发表于 2023-03-12 18:47:00">2023-03-12</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://api.paugram.com/wallpaper/?tmp=3')"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By 泠妄</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><a href="https://icp.gov.moe/?keyword=20210741" target="_blank">萌ICP备20210741号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-butterfly/4.5.1/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-butterfly/4.5.1/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-butterfly/4.5.1/js/tw_cn.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? '' : ''
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdnjs.cloudflare.com/ajax/libs/mermaid/9.1.7/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadWaline () {
+  function insertCSS () {
+    const link = document.createElement("link")
+    link.rel = "stylesheet"
+    link.href = "https://cdnjs.cloudflare.com/ajax/libs/waline/2.13.0/waline.min.css"
+    document.head.appendChild(link)
+  }
+
+  function initWaline () {
+    const waline = Waline.init(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://waline-738z.vercel.app/',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline()
+  else {
+    insertCSS()
+    getScript('https://cdnjs.cloudflare.com/ajax/libs/waline/2.13.0/waline.min.js').then(initWaline)
+  }
+}
+
+if ('Waline' === 'Waline' || !true) {
+  if (true) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = () => {
+    const loadWaline = () => {
+      Waline.RecentComments({
+        serverURL: 'https://waline-738z.vercel.app/',
+        count: 6
+      }).then(({comments}) => {
+        const walineArray = comments.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.objectId,
+            'date': e.insertedAt,
+          }
+        })
+        saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+        generateHtml(walineArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      }) 
+    }
+
+    if (typeof Waline === 'function') loadWaline() 
+    else getScript('https://cdnjs.cloudflare.com/ajax/libs/waline/2.13.0/waline.min.js').then(loadWaline)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
